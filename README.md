@@ -1,4 +1,4 @@
-# Portfolio Optimization Demo (`run.py`)
+# Markowitz_Portifolio_Optimization
 
 End-to-end workflow for Markowitz portfolio optimization:
 
