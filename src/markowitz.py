@@ -31,7 +31,7 @@ def align_inputs(mu: pd.Series, cov: pd.DataFrame) -> tuple[np.ndarray, np.ndarr
     if not isinstance(cov, pd.DataFrame):
         raise TypeError("cov must be a pandas DataFrame")
 
-    assets = list(mu.index)
+    assets = list(mu.index) 
 
     # Ensure cov contains all assets in mu
     missing = [a for a in assets if a not in cov.index or a not in cov.columns]
@@ -39,13 +39,13 @@ def align_inputs(mu: pd.Series, cov: pd.DataFrame) -> tuple[np.ndarray, np.ndarr
         raise ValueError(f"Cov is missing assets.")
 
     cov_aligned = cov.loc[assets, assets]
-    mu_vec = mu.loc[assets].to_numpy(dtype = float)
+    mu_vec = mu.loc[assets].to_numpy(dtype = float) #convert to numpy arrays, whih are easier for linar algebra
     cov_mat = cov_aligned.to_numpy(dtype = float)
 
     return mu_vec, cov_mat, assets
 
 
-def minimum_variance_weights(
+def minimum_variance_weights( #minimzes risk only
     cov: pd.DataFrame,
     ridge: float = 0.0,
 ) -> pd.Series:
@@ -76,10 +76,10 @@ def minimum_variance_weights(
         raise ValueError("Cannot compute minimum variance weights (denominator is zero).")
 
     w = x / denom
-    return pd.Series(w, index = assets, name = "weight")
+    return pd.Series(w, index = assets, name = "weight") #gives a vector proportional to weights, normalize to sum to 1
 
 
-def max_sharpe_weights(
+def max_sharpe_weights( #maximizes return per unit risk
     mu: pd.Series,
     cov: pd.DataFrame,
     rf: float = 0.0,
