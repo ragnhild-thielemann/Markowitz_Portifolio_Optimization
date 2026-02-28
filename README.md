@@ -20,10 +20,29 @@ Using historical price data, the model:
 
 
 # Demo: 
-![Demo](images/portefolio.png)
-![Demo](images/metrics_and_risk.png)
-![Demo](images/plottssss.png)
+![Demo](images/første_plott.png)
+![Demo](images/forventet_avkastning.png)
+![Demo](images/risk.png)
+![Demo](images/plott.png)
 
+The plot we obtain is the Efficient Frontier, which visualizes the relationship between portfolio risk (volatility) and expected return.
+
+On the x-axis, we plot portfolio volatility (standard deviation), which measures risk.
+On the y-axis, we plot expected annual return.
+
+Each point on the curve represents an optimized portfolio with a specific combination of weights. The frontier itself shows the set of portfolios that minimize risk for a given level of expected return. Portfolios below the curve are inefficient because it is possible to achieve a higher return for the same level of risk.
+
+### Key portfolios highlighted in the plot:
+
+#### Minimum-Variance Portfolio:
+The leftmost point on the frontier. This portfolio has the lowest possible volatility among all fully invested portfolios.
+
+#### Maximum-Sharpe (Tangency) Portfolio:
+The portfolio with the highest Sharpe ratio. Graphically, it is the point where a line from the risk-free rate is tangent to the efficient frontier. It offers the highest expected excess return per unit of risk.
+
+If random portfolios are plotted as scattered points, they typically form a cloud below the efficient frontier. This illustrates how optimization improves the risk-return tradeoff compared to arbitrary weight combinations.
+
+Overall, the plot provides a clear visual representation of the trade-off between risk and return and shows how different optimization objectives (minimum variance vs. maximum Sharpe) lead to different portfolio choices.
 
 # The mathematics
 
