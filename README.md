@@ -14,7 +14,7 @@ Using historical price data, the model:
 - The implementation bridges mathematical theory and applied quantitative finance, providing a transparent and intuitive tool for portfolio construction and risk assessment
 
 ## Author
-- Ragnhild Thielemann
+- Ragnhild Thielemann and Albert Sjåvåg
 
 
 
