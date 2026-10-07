@@ -15,8 +15,7 @@ Using historical price data, the model:
 
 ## Author
 - Ragnhild Thielemann
-- BSc in Quantitative Finance | University of Oslo
-- Email: ragnhild.thi@gmail.com
+
 
 
 # Demo: 
